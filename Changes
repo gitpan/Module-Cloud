@@ -1,0 +1,14 @@
+Revision history for Perl extension Module::Cloud
+
+0.04  Fr Sep  7 21:53:41 CEST 2007
+        - keep shipit happy (actually, fixed MANIFEST)
+
+0.03  Fr Sep  7 22:00:45 CEST 2007
+        - added t/01_this_dist_cloud.t
+        - fixed some bugs
+
+0.02  Fr Sep  7 21:18:42 CEST 2007
+        - added boilerplate code, getting ready to ship
+
+0.01  Tue May  8 04:05:59 2007
+        - original version
