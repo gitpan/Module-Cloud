@@ -2,18 +2,20 @@ package Module::Cloud;
 
 use warnings;
 use strict;
-use Class::MethodMaker;
 use HTML::TagCloud;
 use File::Find::Rule::MMagic;
 use Module::ExtractUse;
 
-our $VERSION = '0.04';
+
+our $VERSION = '0.06';
 
 
-use Class::MethodMaker
-    [ new   => [ qw/-hash new/ ],
-      array => 'dir',
-    ];
+use base 'Class::Accessor::Complex';
+
+
+Module::Cloud
+    ->mk_new
+    ->mk_array_accessors('dir');
 
 
 sub get_cloud {
@@ -55,10 +57,6 @@ __END__
 
 Module::Cloud - Generates a tag cloud for modules used in given code
 
-=head1 VERSION
-
-This document describes version 0.01 of C<Module::Cloud>.
-
 =head1 SYNOPSIS
 
   use Module::Cloud;
@@ -76,19 +74,34 @@ gives an impression of how often each module is used.
 
 =over 4
 
-=item new()
+=item new
+
+  my $clouder = Module::Cloud->new(dir => \@dirs);
 
 Creates and returns a new object. The constructor will accept as arguments a
 list of pairs, from component name to initial value. For each pair, the named
 component is initialized by calling the method of the same name with the given
 value. 
 
-=item dir()
+=item dir
+=item dir_clear
+=item dir_count
+=item dir_index
+=item dir_isset
+=item dir_pop
+=item dir_push
+=item dir_reset
+=item dir_set
+=item dir_shift
+=item dir_splice
+=item dir_unshift
 
 An array accessor. See L<Class::Method::array> for details on related methods
 provided.
 
-=item get_cloud()
+=item get_cloud
+
+  my $cloud = $clouder->get_cloud;
 
 Traverses the directories set on the C<dir> accessor and searches for files
 containing perl code. For each such file, the modules it uses are extracted.
@@ -97,13 +110,10 @@ often a module is used the bigger it will appear in the tag cloud.
 
 =back
 
-=head1 DIAGNOSTICS
+=head1 TAGS
 
-There are no diagnostics for this module.
-
-=head1 INCOMPATIBILITIES
-
-None reported.
+If you talk about this module in blogs, on del.icio.us or anywhere else,
+please use the C<modulecloud> tag.
 
 =head1 BUGS AND LIMITATIONS
 
@@ -127,8 +137,6 @@ site near you. Or see <http://www.perl.com/CPAN/authors/id/M/MA/MARCEL/>.
 
 Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
 
-Original idea and code by Greg McCarroll (CPAN ID: GMCCAR).
-
 =head1 COPYRIGHT AND LICENSE
 
 Copyright 2007 by Marcel GrE<uuml>nauer
@@ -136,28 +144,4 @@ Copyright 2007 by Marcel GrE<uuml>nauer
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-=head1 DISCLAIMER OF WARRANTY
-
-BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
-FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
-OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
-ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
-YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
-NECESSARY SERVICING, REPAIR, OR CORRECTION.
-
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
-REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
-LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
-OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
-THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
-RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
-FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
-SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
-
 =cut
-

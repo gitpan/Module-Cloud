@@ -2,7 +2,9 @@
 abstract: Generates a tag cloud for modules used in given code
 author: Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
 build_requires: 
+  Test::Compile: 0
   Test::More: 0
+  UNIVERSAL::require: 0
 distribution_type: module
 generated_by: Module::Install version 0.67
 license: perl
@@ -15,9 +17,10 @@ no_index:
     - inc
     - t
 requires: 
-  Class::MethodMaker: 0
+  Class::Accessor::Complex: 0
   File::Find::Rule::MMagic: 0
   Getopt::Attribute: 0
   HTML::TagCloud: 0
   Module::ExtractUse: 0
-version: 0.04
+  perl: 5.6.0
+version: 0.06

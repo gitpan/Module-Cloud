@@ -8,7 +8,7 @@ my $clouder = Module::Cloud->new(dir => "$Bin/..");
 my $cloud = $clouder->get_cloud->html_and_css;
 
 my @modules = qw/
-    Class::MethodMaker File::Find::Rule::MMagic HTML::TagCloud
+    Class::Accessor::Complex File::Find::Rule::MMagic HTML::TagCloud
     Module::ExtractUse strict warnings
 /;
 
