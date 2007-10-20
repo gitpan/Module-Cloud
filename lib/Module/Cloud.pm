@@ -7,13 +7,13 @@ use File::Find::Rule::MMagic;
 use Module::ExtractUse;
 
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 
 use base 'Class::Accessor::Complex';
 
 
-Module::Cloud
+__PACKAGE__
     ->mk_new
     ->mk_array_accessors('dir');
 

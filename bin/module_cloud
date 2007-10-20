@@ -5,6 +5,8 @@ use warnings;
 use Getopt::Attribute;
 use Module::Cloud;
 
+our $VERSION = '0.07';
+
 our @dir : Getopt(dir=s);
 
 print Module::Cloud->new(dir => @dir)->get_cloud->html_and_css;
