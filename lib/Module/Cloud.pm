@@ -7,7 +7,7 @@ use File::Find::Rule::MMagic;
 use Module::ExtractUse;
 
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 
 use base 'Class::Accessor::Complex';

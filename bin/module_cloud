@@ -5,7 +5,7 @@ use warnings;
 use Getopt::Attribute;
 use Module::Cloud;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 our @dir : Getopt(dir=s);
 

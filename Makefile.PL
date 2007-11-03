@@ -13,6 +13,6 @@ build_requires 'Test::More' => '0.70';
 
 install_script 'bin/module_cloud';
 
-use_standard_tests;
+use_standard_tests(without => 'pod_coverage');
 auto_include;
 WriteAll;
