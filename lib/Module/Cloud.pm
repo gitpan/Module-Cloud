@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Module::Cloud;
-our $VERSION = '1.100860';
+our $VERSION = '1.100861';
 # ABSTRACT: Generates a tag cloud for modules used in given code
 use HTML::TagCloud;
 use File::Find::Rule::MMagic;
@@ -47,7 +47,7 @@ Module::Cloud - Generates a tag cloud for modules used in given code
 
 =head1 VERSION
 
-version 1.100860
+version 1.100861
 
 =head1 SYNOPSIS
 

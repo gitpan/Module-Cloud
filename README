@@ -2,7 +2,7 @@ NAME
     Module::Cloud - Generates a tag cloud for modules used in given code
 
 VERSION
-    version 1.100860
+    version 1.100861
 
 SYNOPSIS
       use Module::Cloud;

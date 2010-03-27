@@ -14,7 +14,7 @@ name: Module-Cloud
 provides:
   Module::Cloud:
     file: lib/Module/Cloud.pm
-    version: 1.100860
+    version: 1.100861
 requires:
   Carp: 0
   Class::Accessor::Complex: 0
@@ -23,6 +23,7 @@ requires:
   File::Find::Rule::MMagic: 0
   File::Temp: 0
   FindBin: 0
+  Getopt::Attribute: 0
   HTML::TagCloud: 0
   Module::ExtractUse: 0
   Scalar::Util: 0
@@ -33,4 +34,4 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Module-Cloud
   homepage: http://search.cpan.org/dist/Module-Cloud/
   repository: http://github.com/hanekomu/Module-Cloud
-version: 1.100860
+version: 1.100861

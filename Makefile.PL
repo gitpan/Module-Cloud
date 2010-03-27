@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
                        'EXE_FILES' => [
                                         'bin/module_cloud'
                                       ],
-                       'VERSION' => '1.100860',
+                       'VERSION' => '1.100861',
                        'PREREQ_PM' => {
                                         'Class::Accessor::Complex' => '0',
                                         'Scalar::Util' => '0',
@@ -36,7 +36,8 @@ my %WriteMakefileArgs = (
                                         'Carp' => '0',
                                         'Test::More' => '0.88',
                                         'File::Find' => '0',
-                                        'File::Temp' => '0'
+                                        'File::Temp' => '0',
+                                        'Getopt::Attribute' => '0'
                                       },
                        'LICENSE' => 'perl'
                      );

@@ -9,7 +9,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "1.100860",
+   "version" : "1.100861",
    "name" : "Module-Cloud",
    "author" : [
       "Marcel Gruenauer <marcel@cpan.org>"
@@ -18,7 +18,7 @@
    "build_requires" : {},
    "provides" : {
       "Module::Cloud" : {
-         "version" : "1.100860",
+         "version" : "1.100861",
          "file" : "lib/Module/Cloud.pm"
       }
    },
@@ -32,10 +32,11 @@
       "Module::ExtractUse" : "0",
       "File::Find::Rule::MMagic" : "0",
       "Carp" : "0",
-      "Test::More" : "0.88",
       "perl" : "5.008",
+      "Test::More" : "0.88",
       "File::Find" : "0",
-      "File::Temp" : "0"
+      "File::Temp" : "0",
+      "Getopt::Attribute" : "0"
    },
    "abstract" : "Generates a tag cloud for modules used in given code",
    "configure_requires" : {

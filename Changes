@@ -1,5 +1,8 @@
 Revision history for Perl extension Module-Cloud
 
+1.100861  2010-03-27 14:26:23 Europe/Vienna
+    - fixed bin/module_cloud
+
 1.100860  2010-03-27 12:54:56 Europe/Vienna
     - converted the distribution to Dist::Zilla-style
 
