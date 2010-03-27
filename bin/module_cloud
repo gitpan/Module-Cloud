@@ -1,12 +1,9 @@
-#!/usr/bin/perl
-
+use 5.008;
 use strict;
 use warnings;
+
+#!/usr/bin/perl
 use Getopt::Attribute;
 use Module::Cloud;
-
-our $VERSION = '0.08';
-
 our @dir : Getopt(dir=s);
-
 print Module::Cloud->new(dir => @dir)->get_cloud->html_and_css;
